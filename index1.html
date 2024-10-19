@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Diet Advisor Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Smart Diet Advisor Chatbot</h1>
+        <p>Your personal assistant for dietary guidance, meal planning, and nutritional advice.</p>
+
+        <form action="/get_recommendations" method="POST">
+            <input type="text" name="name" placeholder="Enter your name" required>
+            <input type="number" name="age" placeholder="Enter your age" required>
+            <select name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select>
+            <input type="text" name="health_conditions" placeholder="Health conditions (comma-separated)" required>
+            <input type="text" name="dietary_preferences" placeholder="Dietary preferences (comma-separated)" required>
+            <button type="submit" class="start-button">Get Recommendations</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Dietary Recommendations</title>
+</head>
+<body>
+    <h1>Dietary Recommendations</h1>
+    <ul>
+        {% for rec in recommendations %}
+            <li>{{ rec }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Sample Meal Plan</h2>
+    <ul>
+        {% for meal, menu in meal_plan.items() %}
+            <li>{{ meal.capitalize() }}: {{ menu }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Dietary Recommendations</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Include your CSS for styling -->
+</head>
+<body>
+    <div class="container">
+        <h1>Dietary Recommendations</h1>
+
+        <h2>Personalized Dietary Recommendations:</h2>
+        <ul class="recommendations-list">
+            {% for rec in recommendations %}
+                <li>{{ rec }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Sample Meal Plan:</h2>
+        <ul class="meal-plan-list">
+            {% for meal, menu in meal_plan.items() %}
+                <li><strong>{{ meal.capitalize() }}:</strong> {{ menu }}</li>
+            {% endfor %}
+        </ul>
+
+        <a href="/" class="start-button">Start Over</a> <!-- Option to go back to home -->
+    </div>
+</body>
+</html>
